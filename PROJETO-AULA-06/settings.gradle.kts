@@ -1,1 +1,0 @@
-rootProject.name = "PROJETO-AULA-06"
