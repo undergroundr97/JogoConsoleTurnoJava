@@ -1,14 +1,18 @@
 package entities;
 
+import inventory.Inventory;
+
+//module
 public class Player {
     public String name;
     public int level;
+    private Inventory inventory = new Inventory();
     public double hitPoints;
     public double attack;
     public Player(String name){
         this.name = name;
         this.hitPoints = 100;
-        this.attack = 5;
+        this.attack = 50;
         this.level = 1;
     }
     public double playerAttack(){

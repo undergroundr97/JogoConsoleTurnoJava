@@ -6,13 +6,19 @@ public class Enemy {
     public String enemyName;
     public double hitpoints;
     public double attack;
+    public static int enemyType;
     public Enemy(){
+        this.enemyType = enemyClassType();
         this.enemyCount += 1;
         this.enemyName = "Enemy" + this.enemyCount;
         this.hitpoints = 20 * this.enemyCount;
         this.attack = 2 * enemyCount;
 //        int level = (int) enemyCount * 3;
     }
+    private static int enemyClassType() {
+        return  (int) (Math.random() * 3.99);
+    }
+
     public double enemyAttack(){
         return this.attack;
     }
@@ -32,3 +38,6 @@ public class Enemy {
     }
 
 }
+
+
+
