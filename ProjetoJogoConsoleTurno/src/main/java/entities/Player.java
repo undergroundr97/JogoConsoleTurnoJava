@@ -9,6 +9,7 @@ public class Player {
     private Inventory inventory = new Inventory();
     public double hitPoints;
     public double attack;
+
     public Player(String name){
         this.name = name;
         this.hitPoints = 100;
@@ -51,6 +52,14 @@ public class Player {
         } else {
 
         }
+    }
+    public void addGoldToInventory(double gold){
+        this.inventory.addGoldToInventory(gold);
+        System.out.println("Voce adicionou " + gold + " " +
+                "ao inventario.");
+    }
+    public double  getGoldValue(){
+        return this.inventory.goldAvailable();
     }
 
 }

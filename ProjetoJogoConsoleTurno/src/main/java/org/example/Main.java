@@ -17,6 +17,7 @@ public class Main {
 //        Enemy enemy1 = new Enemy();
         boolean firstTime = true;
         do {
+            System.out.println("Voce tem: " + player1.getGoldValue() + " gold no inventaio");
 
             if (firstTime){
                 Thread.sleep(1500);
@@ -43,7 +44,7 @@ public class Main {
                         EnemyGenerator.createEnemy(newEnemy);
                 System.out.println(Enemy.enemyCount);
             }
-            player1.
+            player1.addGoldToInventory(200);
             Thread.sleep(1000);
         } while (player1.hitPoints > 0);
     }

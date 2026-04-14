@@ -1,7 +1,9 @@
 package inventory;
 public class Inventory {
-    private static double gold;
-
+    private double gold;
+    public double goldAvailable(){
+        return this.gold;
+    }
     public Inventory(double gold){
         this.gold = gold;
     }
