@@ -8,12 +8,16 @@ import entities.enemyTypes.Mage;
 import entities.enemyTypes.Warrior;
 
 public class EnemyGenerator {
-    public static Enemy createEnemy(Enemy enemy){
-        if (Enemy.enemyType == 0){
+    private static int randomNumber(){
+        return (int) (Math.random() * 3);
+    }
+    public static Enemy createEnemy(){
+        int randomNumGen = randomNumber();
+        if (randomNumGen == 0){
             return new Enemy();
-        } else if (Enemy.enemyType == 1) {
+        } else if (randomNumGen == 1) {
             return new Warrior();
-        } else if (Enemy.enemyType == 2){
+        } else if (randomNumGen == 2){
             return new Mage();
         } else {
             return new Archer();

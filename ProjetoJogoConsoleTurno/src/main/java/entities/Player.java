@@ -16,6 +16,9 @@ public class Player {
         this.attack = 50;
         this.level = 1;
     }
+    public void increaseAttack(int randomNumber){
+        attack += randomNumber;
+    }
     public double playerAttack(){
         return this.attack;
     }
@@ -58,7 +61,12 @@ public class Player {
         System.out.println("Voce adicionou " + gold + " " +
                 "ao inventario.");
     }
-    public double  getGoldValue(){
+    public void removeGoldFromInventory(double gold){
+        inventory.removeGoldFromInventory(gold);
+        System.out.println("Voce removeou " + gold + " do inventario.");
+    }
+
+    public double  getGoldFromInventory(){
         return this.inventory.goldAvailable();
     }
 
